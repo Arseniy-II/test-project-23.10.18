@@ -1,0 +1,22 @@
+.notificationContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: $color-back-tr;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
+}
+
+.notification {
+  border-radius: $gap-md;
+  width: 90%;
+  max-width: 600px;
+  padding: $gap-md;
+  @include popup-gradient(to bottom);
+  color: $color-back;
+}

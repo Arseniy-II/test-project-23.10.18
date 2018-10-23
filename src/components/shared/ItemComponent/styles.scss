@@ -1,0 +1,29 @@
+.item {
+    cursor: pointer;
+    @include list-gradient;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px $gap-sm;
+    margin: 10px 0;
+    flex: 0 0 auto;
+}
+.itemFeatured {
+    @include to-gradient;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px;
+}
+.title {
+    color: $color-middle-top;
+    font-size: pxToRem(12)
+}
+.value {
+    font-size: pxToRem(18);
+    color: $color-top;
+}

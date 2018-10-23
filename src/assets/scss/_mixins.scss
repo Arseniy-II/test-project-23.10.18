@@ -1,0 +1,60 @@
+@mixin linear-gradient($direction, $color-start, $color-stop) {
+    background: linear-gradient($direction, $color-start 0%, $color-stop 100%);
+}
+@mixin mobile ($xl: null) {
+    @media (max-width: if($xl, $xl - 1px, $screen-desktop - 1px)) { @content; }
+}
+@mixin desktop ($xl: null) {
+    @media (min-width: if($xl, $xl, $screen-desktop)) { @content; }
+}
+
+@mixin page() {
+    box-sizing: border-box;
+    padding: 10px $gap-md 10px $gap-md;
+    @include desktop {
+        padding: 15px $gap-lg 15px $gap-lg;
+    }
+}
+
+// LIST GRADIENT
+@mixin list-gradient($direction: to right) {
+    @include linear-gradient(
+                    $direction,
+                    var(--color-gradient-list-start),
+                    var(--color-gradient-list-stop)
+    );
+}
+
+// FOOTER GRADIENT
+@mixin footer-gradient($direction: to right) {
+    @include linear-gradient(
+                    $direction,
+                    var(--color-gradient-footer-start),
+                    var(--color-gradient-footer-stop)
+    );
+}
+
+// TO GRADIENT
+@mixin to-gradient($direction: to right) {
+    @include linear-gradient(
+                    $direction,
+                    var(--color-gradient-to-start),
+                    var(--color-gradient-to-stop)
+    );
+}
+
+// POPUP GRADIENT
+@mixin popup-gradient($direction: to right) {
+    @include linear-gradient(
+                    $direction,
+                    var(--color-gradient-popup-start),
+                    var(--color-gradient-popup-stop)
+    );
+}
+
+@mixin icon($width, $invert: null) {
+    stroke-width: 3px;
+    stroke: if($invert, none, currentColor);
+    fill: if($invert, currentColor, none);
+    width: $width;
+}

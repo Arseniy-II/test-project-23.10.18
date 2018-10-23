@@ -1,0 +1,67 @@
+$height: 45px;
+.button {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: $color-top;
+    height: $height;
+    border-radius: $height;
+    padding: 0 $gap-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $ver-sm 0;
+    font-size: pxToRem(18);
+    transition: transform $time ease-out, border-color $time ease-out, opacity $time ease-out;
+    box-shadow: 0 12px 20px $color-primary-tr;
+    background-color: $color-primary;
+    border: 3px solid $color-primary;
+    flex: 0 0 auto;
+    text-transform: uppercase;
+
+    &:active {
+        transform: translateY(2px);
+    }
+    &:focus {
+        border: 3px solid $color-secondary;
+    }
+}
+.buttonWhite {
+    border: 3px solid transparent;
+    background-color: $color-top-tr;
+    box-shadow: none;
+    &:focus {
+        border: 3px solid $color-top;
+    }
+}
+.buttonFull {
+    width: 100%;
+}
+.buttonAsLink {
+    border: 3px solid transparent;
+    background-color: transparent;
+    color: $color-top;
+    box-shadow: none;
+    text-transform: none;
+}
+.buttonDisabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+.buttonLowerCase {
+    text-transform: none;
+}
+.buttonSmall {
+    padding: 0 $gap-sm;
+    border-width: 2px;
+    height: 35px;
+    &:focus {
+        border-width: 2px;
+    }
+}
+.buttonDanger {
+    margin: 20px;
+    &:focus {
+        border-color: $color-danger;
+    }
+    color: $color-danger;
+}

@@ -1,0 +1,37 @@
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.full {
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+}
+.loader {
+    $size: 50px;
+    width: $size;
+    height: $size;
+}
+.small {
+    $size: 20px;
+    width: $size;
+    height: $size;
+}
+.big {
+    $size: 100px;
+    width: $size;
+    height: $size;
+}
+:export {
+    time: 0.65s;
+    color1: $_color-top;
+    color2: $_color-middle-top;
+    color3: $_color-middle-back;
+    color4: $_color-back;
+    radius: 6;
+}

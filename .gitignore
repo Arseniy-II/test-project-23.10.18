@@ -1,0 +1,14 @@
+.DS_Store
+distr
+node_modules
+public
+.idea
+*.log
+.vscode
+*.lock
+jsconfig.json
+npm-debug.log
+.next
+.cr
+.jest
+build

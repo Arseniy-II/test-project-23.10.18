@@ -1,0 +1,66 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: $color-middle-top;
+    font-size: pxToRem(16);
+    line-height: 1.5;
+    word-break: break-word;
+}
+a {
+    color: $color-primary;
+    text-decoration: underline;
+    outline: none;
+}
+h1 {
+    color: $color-top;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: pxToRem(24);
+}
+h2 {
+    color: $color-top;
+    font-weight: 400;
+    font-size: pxToRem(18);
+}
+
+button {
+    color: $color-top;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+input {
+    color: $color-back;
+    background-color: transparent;
+}
+
+textarea {
+    color: $color-top;
+    background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $color-middle-back;
+    border-radius:10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-middle-top;
+    border: 3px solid $color-middle-back;
+    border-radius:10px;
+    cursor: pointer;
+}
+

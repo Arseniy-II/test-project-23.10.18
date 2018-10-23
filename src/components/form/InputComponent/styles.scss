@@ -1,0 +1,123 @@
+$line-width: 1px;
+.container {
+    margin: 28px 0;
+    position: relative;
+    width: 100%;
+}
+
+.inputBox {
+    font-size: pxToRem(16);
+    border-bottom: $line-width solid $color-secondary;
+    display: flex;
+}
+
+.activeLine {
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        height: $line-width;
+        background-color: $color-top;
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        transition: width ease-out $time;
+    }
+    &::after {
+        left: 50%;
+    }
+    &::before {
+        right: 50%;
+    }
+}
+
+.placeholder {
+    position: absolute;
+    color: $color-secondary;
+    transform: translateY(-7px);
+    left: 0;
+    bottom: 0;
+    transition: transform $time ease-out, font-size $time ease-out, color $time ease-out;
+    pointer-events: none;
+}
+.required {
+    color: $color-danger;
+}
+
+.input {
+    border: none;
+    flex: 1 1 auto;
+    padding: 5px 0;
+    outline: none;
+    color: $color-top;
+}
+
+@keyframes opaque {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.error {
+    animation: opaque $time ease-out both;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: $color-danger;
+    font-size: pxToRem(12);
+}
+
+.containerActive {
+    .activeLine {
+        &::after,
+        &::before {
+            width: 50%;
+        }
+    }
+}
+
+.containerPlaceholderActive {
+    .placeholder {
+        transform: translateY(-32px);
+        font-size: pxToRem(12);
+        color: $color-top;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.containerError {
+    .inputBox {
+        animation: shake $time-long cubic-bezier(.36, .07, .19, .97) both;
+        transform: translate3d(0, 0, 0);
+        border-bottom: 1px $color-danger solid;
+    }
+    .input {
+        color: $color-danger;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

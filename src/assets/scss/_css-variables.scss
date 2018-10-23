@@ -1,0 +1,38 @@
+$colors: (
+        --color-back: $_color-back,
+        --color-middle-back: $_color-middle-back,
+        --color-middle: $_color-middle,
+        --color-middle-top: $_color-middle-top,
+        --color-top: $_color-top,
+        --color-primary: $_color-primary,
+        --color-secondary: $_color-secondary,
+        --color-success: $_color-success,
+        --color-warning: $_color-warning,
+        --color-danger: $_color-danger,
+
+        --color-back-tr: fade_out($_color-back, 0.2),
+        --color-top-tr: fade_out($_color-top, 0.7),
+        --color-primary-tr: fade_out($_color-primary, 0.7),
+        --color-secondary-tr: fade_out($_color-secondary, 0.7),
+        --color-success-tr: fade_out($_color-success, 0.7),
+        --color-warning-tr: fade_out($_color-warning, 0.7),
+        --color-danger-tr: fade_out($_color-danger, 0.7),
+    // LIST GRADIENT
+        --color-gradient-list-start: lighten($_color-back, 20%),
+        --color-gradient-list-stop: lighten($_color-back, 5%),
+    // FOOTER GRADIENT
+        --color-gradient-footer-start: lighten($_color-back, 5%),
+        --color-gradient-footer-stop: lighten($_color-back, 15%),
+    // TO GRADIENT
+        --color-gradient-to-start: darken(desaturate(adjust-hue($_color-primary, 125deg), 40%), 14%),
+        --color-gradient-to-stop: lighten($_color-back, 5%),
+    // POPUP GRADIENT
+        --color-gradient-popup-start: $_color-middle-top,
+        --color-gradient-popup-stop: $_color-top,
+);
+
+:root {
+    @each $name, $color in $colors {
+        #{$name}: $color;
+    }
+}

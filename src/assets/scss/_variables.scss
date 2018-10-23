@@ -1,0 +1,65 @@
+// === COLORS ===
+// DON'T USE THIS
+$_color-back: #203c50;
+$_color-middle-back: lighten($_color-back, 10%);
+$_color-middle: #97afc0;
+$_color-middle-top: #b3cfd6;
+$_color-top: lighten($_color-back, 75%);
+
+$_color-primary: #32bae4;
+$_color-secondary: #819fad;
+
+$_color-success: #13ce9a;
+$_color-warning: #ffca8a;
+$_color-danger: #ff767b;
+
+// USE THIS INSTEAD (it will bind css variables)
+// map colors to css variables
+$color-back: var(--color-back);
+$color-middle-back: var(--color-middle-back);
+$color-middle: var(--color-middle);
+$color-middle-top: var(--color-middle-top);
+$color-top: var(--color-top);
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-success: var(--color-success);
+$color-warning: var(--color-warning);
+$color-danger: var(--color-danger);
+
+$color-back-tr: var(--color-back-tr);
+$color-top-tr: var(--color-top-tr);
+$color-primary-tr: var(--color-primary-tr);
+$color-secondary-tr: var(--color-secondary-tr);
+$color-success-tr: var(--color-success-tr);
+$color-warning-tr: var(--color-warning-tr);
+$color-danger-tr: var(--color-danger-tr);
+
+// === DIMENSIONS ===
+@function pxToRem($size) {
+    @return #{$size/16}rem;
+}
+
+$gap-xs: pxToRem(5);
+$gap-sm: pxToRem(10);
+$gap-md: pxToRem(20);
+$gap-lg: pxToRem(30);
+
+//$ver-xs: pxToRem(6);
+$ver-sm: pxToRem(12);
+//$ver-md: pxToRem(24);
+//$ver-lg: pxToRem(36);
+
+$screen-desktop: 1024px;
+
+$header-height: 60px;
+$nav-height: 56px;
+
+$header-offset: 125px;
+
+// === TIMING ===
+$time: 200ms;
+$time-long: 1000ms;
+
+// === COMMON USES ===
+$border: 1px solid $color-middle;

@@ -1,0 +1,4 @@
+@import '~normalize-scss/sass/normalize';
+@include normalize();
+@import '/assets/scss/_css-variables.scss';
+@import '/assets/scss/_reset.scss';
